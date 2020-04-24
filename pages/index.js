@@ -55,7 +55,7 @@ export default function Home() {
               <li
                 key={random}
                 style={{
-                  color: "green",
+                  color: "orange",
                   fontWeight: 800,
                   textDecoration: "line-through",
                 }}
