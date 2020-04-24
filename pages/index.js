@@ -1,10 +1,11 @@
-import Head from 'next/head'
+import Head from "next/head";
 
 export default function Home() {
+  const Many = Array(10000).fill({});
   return (
     <div className="container">
       <Head>
-        <title>Create Next App</title>
+        <title>Inline Styles</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
@@ -46,6 +47,24 @@ export default function Home() {
             </p>
           </a>
         </div>
+        <ol>
+          {Many.map((item) => {
+            const random = Math.random();
+
+            return (
+              <li
+                key={random}
+                style={{
+                  color: "green",
+                  fontWeight: 800,
+                  textDecoration: "line-through",
+                }}
+              >
+                {random}
+              </li>
+            );
+          })}
+        </ol>
       </main>
 
       <footer>
@@ -200,5 +219,5 @@ export default function Home() {
         }
       `}</style>
     </div>
-  )
+  );
 }
