@@ -1,7 +1,7 @@
 import Head from "next/head";
 
 export default function Home() {
-  const Many = Array(10000).fill({});
+  const Many = Array(100000).fill({});
   return (
     <div className="container">
       <Head>
